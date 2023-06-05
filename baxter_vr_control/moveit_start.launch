@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+moveit_start.launch
+Author: Preston Ward
+Date: 5/30/2023
+-->
+<launch>
+  <arg name="load_robot_description" default="false"/>
+
+  <!-- parameters for left and right grippers. Set to true to check for collisions for their links -->
+  <arg name="right_electric_gripper" default="true"/>
+  <arg name="left_electric_gripper" default="true"/>
+
+  <!-- Set the kinematic tips for the left_arm and right_arm move_groups -->
+  <arg name="left_tip_name" default="left_gripper"/>
+  <arg name="right_tip_name" default="right_gripper"/>
+  <include file="$(find baxter_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="$(arg load_robot_description)"/>
+    <arg name="left_electric_gripper" value="$(arg left_electric_gripper)"/>
+    <arg name="right_electric_gripper" value="$(arg right_electric_gripper)"/>
+    <arg name="left_tip_name" value="$(arg left_tip_name)"/>
+    <arg name="right_tip_name" value="$(arg right_tip_name)"/>
+  </include>
+
+  <include file="$(find baxter_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+  </include>
+
+  <!-- Baxter provided usages -->
+  <node name="joint_trajectory_action_server" pkg="baxter_interface" type="joint_trajectory_action_server.py" output="screen" />
+</launch>
