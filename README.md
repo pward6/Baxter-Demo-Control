@@ -13,7 +13,7 @@ Clone this repository into the /src file in your VM and your local machine. Gene
 ## Controlling the Robot
 This project leverages ROSBridge to communicate between ROS and a windows machine. ROSBridge is a series of programs that allows developers to create websockets. Additionally, I used the Moveit! API to implement an inverse kinematics solver to control the arms. Moveit! is part of Baxter's sdk, which allows for simple development. 
 
-To start the IK solver, run the moveit_start.launch folder ``bash roslaunch FIXME moveit_start.launch`` and then run the python script with ``bash rosrun baxter_vr_control baxterIK.py``
+To start the IK solver, run the moveit_start.launch folder ``roslaunch baxter_vr_control moveit_start.launch`` and then run the python script with ``rosrun baxter_vr_control baxterIK.py``
 
 ##TODO
 Visualize Kinect pointcloud data in the Unity Scene
