@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>baxter_vr_control</name>
+  <name>baxter_demo_maker</name>
   <version>0.0.0</version>
-  <description>The baxter_vr_control package</description>
+  <description>The baxter_demo_maker package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
-  <!-- <maintainer email="pward6@huskers.unl.edu">Jane Doe</maintainer> -->
-  <maintainer email="pward6@todo.todo">pward6</maintainer>
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="pward6@unl.huskers.edu">pward6</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/baxter_vr_control</url> -->
+  <!-- <url type="website">http://wiki.ros.org/unity_listener</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -49,6 +49,9 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
